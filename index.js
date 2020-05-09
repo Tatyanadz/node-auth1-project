@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000
 
 server.use(cors())
 server.use(helmet())
-server.use(express())
+server.use(express.json())
 
 server.use("/auth", authRouter)
 server.use("/users", usersRouter)
